@@ -1,0 +1,37 @@
+{
+  "name": "Brightpath Digital",
+  "city": "Bengaluru",
+  "description": "A digital marketing agency that helps small and mid-sized Indian businesses get more customers online.",
+  "services": {
+    "social_media": {
+      "label": "Social media management",
+      "price": "40,000 to 1,20,000 rupees per month"
+    },
+    "performance_ads": {
+      "label": "Google and Meta ads",
+      "price": "a 30,000 rupees per month management fee, plus your ad spend"
+    },
+    "seo": {
+      "label": "SEO",
+      "price": "35,000 to 90,000 rupees per month"
+    },
+    "website": {
+      "label": "Website design",
+      "price": "75,000 to 3,00,000 rupees, one-time"
+    },
+    "other": {
+      "label": "Something else",
+      "price": "depends on the scope; the strategist will quote after the meeting"
+    }
+  },
+  "meetings": {
+    "length_minutes": 30,
+    "format": "a free 30-minute Google Meet call with a senior strategist",
+    "timezone": "Asia/Kolkata",
+    "working_days": ["Mon", "Tue", "Wed", "Thu", "Fri"],
+    "office_hours_start": "10:00",
+    "office_hours_end": "18:00",
+    "days_ahead": 3,
+    "min_notice_hours": 2
+  }
+}

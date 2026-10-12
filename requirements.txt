@@ -1,0 +1,27 @@
+# Web server: enquiry form + Vapi webhook
+fastapi>=0.115
+uvicorn[standard]>=0.30
+jinja2>=3.1              # HTML template for the form
+python-multipart>=0.0.9  # lets FastAPI read submitted form fields
+
+# Calling the Vapi REST API
+requests>=2.32
+
+# Reading secrets from .env
+python-dotenv>=1.0
+
+# Time zones (India Standard Time) on every OS
+tzdata>=2024.1
+
+# Google Sheets storage (service account)
+gspread>=6.1
+google-auth>=2.30
+
+# Dashboard + analytics
+pandas>=2.2
+streamlit>=1.40
+plotly>=5.24
+
+# Tests
+pytest>=8.0
+httpx>=0.27

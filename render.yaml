@@ -1,0 +1,35 @@
+# Render "Blueprint": New + > Blueprint > pick this repo.
+# Deploys the enquiry form + Vapi webhook as one web service.
+# Secrets are marked sync:false, so Render asks for them in its dashboard;
+# they never live in this file.
+services:
+  - type: web
+    name: callback-ai
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn callback_ai.server:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: STORAGE_BACKEND
+        value: sheets
+      - key: TEST_MODE
+        value: "true"
+      - key: CALL_DELAY_SECONDS
+        value: "30"
+      - key: PUBLIC_BASE_URL       # your Render URL, e.g. https://callback-ai.onrender.com
+        sync: false
+      - key: ALLOWED_NUMBERS
+        sync: false
+      - key: VAPI_API_KEY
+        sync: false
+      - key: VAPI_PHONE_NUMBER_ID
+        sync: false
+      - key: VAPI_WEBHOOK_SECRET
+        sync: false
+      - key: GOOGLE_SHEET_ID
+        sync: false
+      - key: GOOGLE_CREDENTIALS_JSON
+        sync: false
